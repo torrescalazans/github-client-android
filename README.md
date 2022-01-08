@@ -24,19 +24,21 @@ GitHub client features:
 * Network error handling
 
 Expected flows:
-
+<p float="left">
 <img src="https://torrescalazans.github.io/projects/github-client-android/docs/assets/home-repositories-list.png" width="180">
 <img src="https://torrescalazans.github.io/projects/github-client-android/docs/assets/home-repositories-list_searching-01.png" width="180">
 <img src="https://torrescalazans.github.io/projects/github-client-android/docs/assets/home-repositories-list_searching-02.png" width="180">
 <img src="https://torrescalazans.github.io/projects/github-client-android/docs/assets/repository-details.png" width="180">
 <img src="https://torrescalazans.github.io/projects/github-client-android/docs/assets/home-repositories-list_no-results-found.png" width="180">
 <img src="https://torrescalazans.github.io/projects/github-client-android/docs/assets/home-repositories-list_confirm-exit.png" width="180">
+</p>
 
 Exception flows:
-
+<p float="left">
 <img src="https://torrescalazans.github.io/projects/github-client-android/docs/assets/home-repositories-list_network-error-handling-01.png" width="180">
 <img src="https://torrescalazans.github.io/projects/github-client-android/docs/assets/home-repositories-list_network-error-handling-02.png" width="180">
 <img src="https://torrescalazans.github.io/projects/github-client-android/docs/assets/repository-details_network-error-handling.png" width="180">
+</p>
 
 Setup
 -------
