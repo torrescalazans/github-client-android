@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/repository_list_item_row_margin_horizontal"
+    tools:ignore="UnusedAttribute">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_avatar"
+        android:layout_width="@dimen/repository_list_item_avatar_width_size"
+        android:layout_height="@dimen/repository_list_item_avatar_height_size"
+        app:cardCornerRadius="@dimen/repository_list_item_avatar_radius_size"
+        android:layout_margin="@dimen/repository_list_item_repository_name_margin_size"
+        app:layout_constraintBottom_toTopOf="@+id/textview_repository_owner_login_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageview_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/repository_list_item_accessibility_avatar"
+            android:scaleType="centerCrop"
+            tools:background="@android:color/holo_orange_light"
+            tools:src="@tools:sample/avatars" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textview_repository_owner_login_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/repository_list_item_avatar_margin_size"
+        android:gravity="center"
+        android:textSize="@dimen/repository_list_item_avatar_repository_owner_login_name_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textview_repository_language"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview_avatar"
+        tools:text="torrescalazans" />
+
+    <TextView
+        android:id="@+id/textview_repository_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/repository_list_item_repository_name_margin_size"
+        android:layout_marginTop="@dimen/repository_list_item_repository_name_margin_size"
+        android:ellipsize="end"
+        android:maxLines="@integer/repository_list_item_repository_name_max_lines_size"
+        android:textSize="@dimen/repository_list_item_repository_name_size"
+        android:textColor="?android:textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardview_avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="android-architecture" />
+
+    <TextView
+        android:id="@+id/textview_repository_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="@integer/repository_list_item_repository_description_max_lines_size"
+        android:ellipsize="end"
+        android:visibility="visible"
+        android:textSize="@dimen/repository_list_item_repository_description_size"
+        android:layout_margin="@dimen/repository_list_item_repository_description_margin_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardview_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/textview_repository_name"
+        app:layout_constraintBottom_toTopOf="@+id/textview_repository_language"
+        tools:ignore="UnusedAttribute"
+        tools:text="A collection of samples to discuss and showcase different architectural tools and patterns for Android apps." />
+
+    <TextView
+        android:id="@+id/textview_repository_language"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/repository_list_item_repository_language_margin_size"
+        android:layout_marginBottom="@dimen/repository_list_item_repository_language_margin_size"
+        android:text="@string/repository_list_item_language"
+        android:textSize="@dimen/repository_list_item_repository_language_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageview_repository_star"
+        app:layout_constraintStart_toEndOf="@+id/cardview_avatar"
+        tools:ignore="RtlCompat" />
+
+    <ImageView
+        android:id="@+id/imageview_repository_star"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/repository_list_item_repository_stars_count_margin_size"
+        android:contentDescription="@string/repository_list_item_accessibility_starts_count"
+        android:src="@drawable/ic_star"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textview_repository_stars_count" />
+
+    <TextView
+        android:id="@+id/textview_repository_stars_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/repository_list_item_repository_stars_count_margin_size"
+        android:textSize="@dimen/repository_list_item_repository_stars_count_size"
+        app:layout_constraintEnd_toStartOf="@id/imageview_repository_fork"
+        tools:layout_editor_absoluteY="77dp"
+        tools:text="30" />
+
+    <ImageView
+        android:id="@+id/imageview_repository_fork"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_git_branch"
+        android:contentDescription="@string/repository_list_item_accessibility_forks_count"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/repository_list_item_repository_forks_count_margin_size"
+        app:layout_constraintEnd_toStartOf="@+id/textview_repository_forks_count" />
+
+    <TextView
+        android:id="@+id/textview_repository_forks_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/repository_list_item_repository_forks_count_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/repository_list_item_repository_forks_count_margin_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="30" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
